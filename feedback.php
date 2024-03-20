@@ -175,6 +175,22 @@ font-weight:500;
 </head>
 
 <body>
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#main">home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </div>
+    </div>
+  </div>
+</nav> -->
 
   
   <main id="main">
@@ -183,35 +199,44 @@ font-weight:500;
       header section ==============================================================
     -->
     <header class="bg-dark border-bottom" id="header">
-      <div class="container py-5">
-        <div class="row">
+    <div class="container py-5">
+   
+    <div class="row">
 
           <!-- first child -->
           <div class="col">
-            <div class="display-1 py-5n bg-secondary text-white"> FREE PAPERS DOWNLOADS</div>
-            <h1 class="font-weight-lighter text-secondary">  </h1>
+      
+          <img src="intangible-assets_10513176.png" class="mx-3" width="100" height="100"alt="">
+<h1 class="font-weight-lighter text-secondary my-5"> 
+          <span id="element"> </span></h1> 
 
           </div>
           <!-- second child -->
           <div class="col d-flex align-items-center justify-content-end  box-shadow: 3px 2px 10px var(--dark);
       ">
 
-            <a href="campus.php" class="btn btn-outline-success mx-3"> AVAILABLE UNIVERSITIES </a>
             
-            <a href="index.php" class="btn btn-outline-success mx-3">HOME</a>
-            <a href="https://github.com/" class="btn btn-outline-success mx-3"> About us </a>
-            <a href="logout.php" class="btn btn-outline-success mx-3"> LogOut </a>
+            <a href="index.php" class="btn btn-outline-success mx-3 p-2">HOME</a>
+            <a href="https://github.com/" class="btn btn-outline-success mx-3 p-2"> About us </a>
+            <a href="logout.php" class="btn btn-outline-success mx-3 p-2"> LogOut </a>
             
           </div>
           
         </div>
       </div>
+ 
+      <marquee direction="right"><P class="text-success " style="font-size:30px; font-weight:bold;text-decoration:underline;text-decoration-color:white;">PLEASE! GIVE YOUR FEEDBACK HERE.</P>
+</marquee>
     </header>
 
-    
+    <div class="bg-dark">
+    <img src="feed.png" class="m-auto" width="300" height="300"alt="">
+
+    </div>
       <!-- content section ======================================================= -->
-     <div class="bg-dark row">
-<div class="wrapper">
+     <div class="bg-dark">
+<div class="wrapper my-2">
+
   <form action=" " method="post">
   <h2>GIVES YOUR FEEDBACK</h2>
     <br>
@@ -233,6 +258,8 @@ font-weight:500;
   <button type="submit" name="send">send feedback</button>
     </div>
   </form>
+  
+
 </div>
 
 </div>
@@ -251,7 +278,15 @@ font-weight:500;
 
   <!-- script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<!-- Setup and start animation! -->
+<script>
+  var typed = new Typed('#element', {
+    strings: ['<b>FREE PAPER DOWNLOAD</b>','PANJAB UNIVERSITY','CHANDIGARH UNIVERSITY'],
+    typeSpeed: 100,
+  });
+</script>
 </body>
 
 </html>

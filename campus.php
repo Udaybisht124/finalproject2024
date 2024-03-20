@@ -16,9 +16,7 @@
 </head>
 
 <body>
-<nav class="nav"><nav class="navbar navbar-dark bg-dark">
-  <!-- Navbar content -->
-</nav></nav>
+
   <!--
     main section =============================================================================
   -->
@@ -51,61 +49,38 @@
         </div>
       </div>
     </header>
-    <div class="d-flex " >
-      
-    <div class="card bg-dark" style="width: 18rem;">
-      <img src="pu-chd.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">PANJAB UNIVERSITY</h5>
-        <p class="card-text "style="color:#1abc9c;">This is the best univeristy in Chandigarh</p>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" style="font-size:30px;">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="nitkuru.jpeg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="nittri.jpeg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src=".../800x400?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+  <footer id="footer">
+      <div class="container border-top py-3">
 
-        <a href="https://pu.ac.in/" class="btn btn-primary">Read More</a>
+        <div class="h5"> Copyright &copy; <a href="https://github.com/Udaybisht124">Uday</a> and <a href="" class="">Rohit</a>  </div>
+        
       </div>
-    </div>
-    
-    <div class="card bg-dark" style="width: 18rem;">
-      <img src="pu-patiala.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">PANJAB UNIVERSITY PATIALA</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card bg-dark" style="width: 18rem;">
-      <img src="nitkuru.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">NIT KURUKSHETRA</h5>
-        <p class="card-text text-white">This is the best nit located at kurukshetra , Haryana</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card bg-dark" style="width: 18rem;">
-      <img src="surat.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title text-white">NIT SURAT</h5>
-        <p class="card-text text-white">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card bg-dark" style="width: 18rem;">
-      <img src="nitwarangle.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">NIT WARANGLE </h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <img src="chandigarhuniversity.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">PANJAB UNIVERSITY</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div>
-    <!--
+    </footer>
+   <!--
       content section =======================================================
     -->
     
@@ -121,12 +96,10 @@
     </footer> -->
 
   </main>
-</div>
+
 
   <!-- script -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script src="js/data.js"></script>
-  <script src="js/script.js"></script>
+ 
 
 </body>
 
