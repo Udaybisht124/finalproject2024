@@ -29,6 +29,9 @@ if(isset($_POST['login'])){
     // Check if user exists
     if (mysqli_num_rows($result) > 0) {
         $_SESSION["name"] = $name;
+        
+
+
         header("Location: home.php"); // Redirect to dashboard
     } 
     else {

@@ -1,4 +1,36 @@
+<?php
+session_start();
 
+
+
+
+
+?>
+
+<?php
+$server="localhost";
+$username="root";
+$password="";
+$dbname="userdata";
+
+$con = mysqli_connect($server,$username,$password,$dbname);
+
+if (!$con)
+{
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$userprofile=$_SESSION['name'];
+if($userprofile == true){
+
+}
+else{
+  header('location:index.php');
+}
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 

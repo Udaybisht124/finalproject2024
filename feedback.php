@@ -1,5 +1,37 @@
 <?php
 session_start();
+
+
+
+
+
+?>
+<?php
+$server="localhost";
+$username="root";
+$password="";
+$dbname="userdata";
+
+$con = mysqli_connect($server,$username,$password,$dbname);
+
+if (!$con)
+{
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$userprofile=$_SESSION['name'];
+if($userprofile == true){
+
+}
+else{
+  header('location:index.php');
+}
+
+
+
+?>
+<?php
+session_start();
 $server="localhost";
 $username="root";
 $password="";
@@ -19,6 +51,8 @@ if(isset($_POST['send'])){
         // inserting the record into the database
         if(mysqli_query($con,$sql)){
         
+
+          
           $error_message = "feedback submitted successfully!";
           echo "<script>alert('$error_message');</script>";
           header("Location:feedback.php"); // Redirect to dashboard

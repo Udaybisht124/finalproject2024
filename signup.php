@@ -20,7 +20,7 @@ if(isset($_POST['submit'])){
 
         // inserting the record into the database
         if(mysqli_query($con,$sql)){
-        
+        $_SESSION["name"]=$name;
           $error_message = "SignUp Successfully please Login Now";
           echo "<script>alert('$error_message');</script>";
           header("Location: index.php"); // Redirect to dashboard
