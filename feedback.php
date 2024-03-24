@@ -1,4 +1,5 @@
 <?php
+session_start();
 $server="localhost";
 $username="root";
 $password="";
@@ -229,12 +230,12 @@ font-weight:500;
 </marquee>
     </header>
 
-    <div class="bg-dark">
+    <!-- <div class="bg-dark">
     <img src="feed.png" class="m-auto" width="300" height="300"alt="">
 
-    </div>
+    </div> -->
       <!-- content section ======================================================= -->
-     <div class="bg-dark">
+     <div class="bg-dark my-3">
 <div class="wrapper my-2">
 
   <form action=" " method="post">

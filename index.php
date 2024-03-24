@@ -1,173 +1,367 @@
 
+<?php
+session_start();
+
+
+// include("connection.php"); // connection
+
+$server="localhost";
+$username="root";
+$password="";
+$dbname="userdata";
+
+$con = mysqli_connect($server,$username,$password,$dbname);
+
+if (!$con)
+{
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// making connection to the database
+
+if(isset($_POST['login'])){
+    $name = $_POST["name"];
+    $password = $_POST["password"];
+    $sql = "SELECT * FROM user_info  WHERE name = '$name' and  password = '$password'";
+    
+    $result = mysqli_query($con, $sql);
+
+    // Check if user exists
+    if (mysqli_num_rows($result) > 0) {
+        $_SESSION["name"] = $name;
+        header("Location: home.php"); // Redirect to dashboard
+    } 
+    else {
+    
+      $error_message = "Incorrect username or password.if we don,t sinup so please go sinup page";
+
+      // Display an alert box using JavaScript
+      echo "<script>alert('$error_message');</script>";
+    }
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Uday & Rohit</title>
-
-  <!-- style -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Anta&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-<body>
+<body class="bg-dark" >
 
-  
-  <main id="main">
 
-    <!--
-      header section ==============================================================
-    -->
-    <header class="bg-dark border-bottom" id="header">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<style>
 
-      <div class="container py-5">
-      <div class="row">
-        <div class="col"></div>
-      </div>
-      
-      <div class="row">
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Anta;
 
-          <!-- first child -->
-          <div class="col-6">
-        
-          <img src="intangible-assets_10513176.png" class="mx-3" width="100" height="100"alt="">
-<h1 class="font-weight-lighter text-secondary my-5"> 
-          <span id="element"> </span></h1> 
+}
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+/* background-color:white; */
+}
+.wrapper{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:400px;
+  height:500px;
+  background-color:#3e773e;
+  border:5px solid white;
+  border-radius:10px;
+transition: .5s;
+margin:45px 20px;
+}
+/* .wrapper:hover{
+  border:5px solid white;
+  background-color:5px solid cyan,inset 0 0 20px cyan;
+} */
 
-          </div>
-          <!-- second child -->
-          <div class="col-6 d-flex mt-2 align-items-center justify-content-end  box-shadow: 3px 2px 10px var(--dark);
-      ">
-<!--       
-      <a href="#search" class="btn btn-outline-success mx-3 p-2"> SEARCH PAPER </a> -->
-            <a href="feedback.php" class="btn btn-outline-success mx-3 p-2"> FEEDBACK </a>
-            <a href="#search" class="btn btn-outline-success mx-3 p-2"> Search Papers </a>
-            
-            <a href="https://github.com/" class="btn btn-outline-success mx-3 "> About us </a>
-            <a href="logout.php" class="btn btn-outline-success mx-3 p-2"> LogOut </a>
-     
-          </div>
-          
-        </div>
-      </div>
-      <marquee direction="right"><P class="text-success " style="font-size:30px; font-weight:bold;text-decoration:underline;text-decoration-color:white;">HELLO WE ARE MAKING THIS WEBSITE ONLY FOR STUDENT BENEFITS OF UNIVERSITY LEVEL</P>
-</marquee>
-    </header>
-<div>   
 
-</div>
 
-<div class="d-flex bg-dark ">
-<div class="card bg-dark" style="width: 18rem;">
-      <img src="puimg.jpeg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title text-white">PANJAB UNIVERSITY</h5>
-        <p class="card-text "style="color:#1abc9c;">This is the best univeristy in Chandigarh</p>
 
-        <a href="https://pu.ac.in/" class="btn btn-primary">Read More</a>
-      </div>
+h2{
+  font-size:2em;
+  text-align:center;
+  color:#fff;
+
+}
+.input-box{
+  position:relative;
+  width:320px;
+  margin:30px 0;
+
+}
+.input-box input{
+  width:100%;
+  height:50px;
+  background:transparent;
+  border:2px solid black;
+  outline:none;
+  border-radius:5px;
+  font-size:1em;
+  color:black;
+  padding: 0 10px 0 35px;
+transition: .5s;
+}
+.wrapper:hover .input-box input{
+  border:2px solid white;
+  box-shadow: 2px 2px white;
+  text:black;
+}
+
+
+.input-box input::placeholder{
+  color:black;
+}
+.input-box .icon{
+  position:absolute;
+  left:#fff;
+  font-size:1.2em;
+  line-height:55px;
+color:white;
+}
+.forgot-pass{
+  margin:-15px 0 15px;
+}
+
+.forgot-pass .a{
+  color:black;
+  font-size: .9em;
+  text-decoration:none;
+}
+.forgot-pass .a:hover{
+  text-decoration:underline;
+
+}
+button{
+  position:relative;
+  width:100%;
+  height:45px;
+  background:black;
+border:none;
+outline:none;
+border-radius:5px;
+cursor:pointer;
+font-size:1em;
+color:#fff;
+font-weight:500;
+}
+.register-link{
+  font-size: .9em;
+  text-align: center;
+  margin:25px 0;
+}
+.register-link p{
+  color:#fff;
+}
+
+.register-link p a{
+  color:#333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link p a:hover{
+  text-decoration: none;
+}
+.paper{
+  font-size:70px;
+  background-color:#3e773e;
+  width:100%;
+}
+.container{
+  background-color:black;
+max-width:100%;
+max-height:100%;
+}
+</style>
+
+<div class="container  w-100">
+  <div class="row  ">
+  <h1 class="paper">PyQuestionPapers</h1>
+  <div class="col-6 ">
+      <img src="3.png" class="bg-dark my-5 mx-5" alt="" width="500px" height="500px">
     </div>
+    <div class="col-6"><div class="wrapper">
 
-    <div class="card bg-dark" style="width: 18rem;">
-      <img src="chdchuni.jpeg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title text-white">CHANDIGARH UNIVERSITY</h5>
-        <p class="card-text "style="color:#1abc9c;">This is the best univeristy in Chandigarh</p>
-
-        <a href="https://www.cuchd.in/" class="btn btn-primary">Read More</a>
-      </div>
-    </div>
-
-    <div class="card bg-dark" style="width: 18rem;">
-      <img src="delhi.jpeg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title text-white">DELHI UNIVERSITY</h5>
-        <p class="card-text "style="color:#1abc9c;">This is the best univeristy in  New Delhi</p>
-
-        <a href="https://www.du.ac.in/" class="btn btn-primary">Read More</a>
-      </div>
-    </div>
-  <div class="card bg-dark" style="width: 18rem;">
-      <img src="nittri.jpeg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title text-white">NIT TRICHI</h5>
-        <p class="card-text "style="color:#1abc9c;">This is the best univeristy in Chandigarh</p>
-
-        <a href="https://www.nitt.edu/" class="btn btn-primary">Read More</a>
-      </div>
-    </div><div class="card bg-dark" style="width: 18rem;">
-      <img src="nitkuru.jpeg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title text-white">NIT KURKSHETRA</h5>
-        <p class="card-text" style="color:#2bc9a4;">This is the best univeristy in Chandigarh</p>
-
-        <a href="https://nitkkr.ac.in/" class="btn btn-primary">Read More</a>
-      </div>
-    </div>
-
-
+<form action="" method="post">
+  <h2>Login Form</h2>
+  <br>
+  <!-- username -->
+  <div class="input-box">
+  <span class="icon material-symbols-outlined">
+person
+</span>
+    <input type="text"  name="name"placeholder="username" required>
 
   </div>
-    <!--
-      content section =======================================================
-    -->
-    <section id="content" class="bg-dark">
-      <!--
-        search bar ------------------------
-      -->
-      <div class="p-5" id="search">
-        <div class="container ">
+<!-- password  -->
+  <div class="input-box">
+  <span class="icon material-symbols-outlined">
+passkey
+</span>
+    <input type="password" name="password" placeholder="password" required>
+    
+  </div>
+  <!-- confirmpassowrd -->
+  <div class="forgot-pass
+  ">
+    <a href="#" class="text-dark">Forgot-Password?</a>
+  </div>  
+   <input type="submit" value="LOGIN" name="login" class="btn btn-dark">
+<a href="signup.php" class="btn btn-outline-dark">SIGNUP</a>
 
-          <div class="h2 py-3 bg-dark"> Search Question Paper that you require </div>
-          
-          <input type="search" name="" id="searchbar" class="form-control" placeholder="Search PDF question paper ...">
-        
-        </div>
-      </div>
-      <!-- 
-          { MAIN DATA CONTAINER  } --------------------------
-       -->
-      <div class="container">
+   <div class="register-link">
+    <p>Don,t have an account</p>
+    <a href="#">Register</a>
+  </div>
+</form>
+</div>
+</div>
+  </div>
+</div>
 
-        <div id="main_data_container">
-          <!-- target by id and fetch data -->
-        </div>
 
-      </div>
-    </section>
 
-    <!--
-      footer section ===============================================================
-    -->
-    <footer id="footer">
-      <div class="container border-top py-3">
 
-        <div class="h5"> Copyright &copy; <a href="https://github.com/Udaybisht124">Uday</a> and <a href="" class="">Rohit</a>  </div>
-        
-      </div>
-    </footer>
 
-  </main>
 
-  <!-- script -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script src="data.js"></script>
-  <script src="script.js"></script>
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-<!-- Setup and start animation! -->
-<script>
-  var typed = new Typed('#element', {
-    strings: ['<b>FREE PAPER DOWNLOAD</b>','PANJAB UNIVERSITY','CHANDIGARH UNIVERSITY'],
-    typeSpeed: 100,
-  });
-</script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <style>
+        :root
+{
+    --primary:#16a085;
+    --secondary:#1abc9c;
+    --light:#ecf0f1;
+    --white:#fff;
+    --dark:#34495e;
+    --black:#2c3e50;
+--primary-blue:rgb(0, 102, 255);
+}
+        *{
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+        }
+        body{
+            width:100vw;
+            height:100vh;
+      display: grid;
+      place-content: center;
+      background-color: rgb(65, 85, 218);
+        }
+        .container{
+            width:550px;
+            height:550px;
+        background-color: rgb(132, 146, 221);
+        display: grid;
+        place-content: center;
+        }
+        h1{
+            color:#fff;
+            text-transform: uppercase;
+            padding:20px 0;
+        }
+
+        .form-group{
+            background-color: greenyellow;
+            width:400px;
+            margin:20px 0;
+        }
+        .form-group input{
+            width:100%;
+            height: 50px;
+            padding: 0 20px;
+        border:none;
+        outline: none;
+        font-size: 1em;
+        }
+        .form-group input:hover{
+            width:100%;
+            height: 50px;
+            padding: 0 20px;
+           font-weight: bolder;
+        }
+    
+    </style>
+    <script>
+
+        function validateForm() {
+            var username = document.getElementById("name").value;
+            var password = document.getElementById("password").value;
+
+            if (username.trim() === "" || password.trim() === "") {
+                alert("Please fill in both username and password.");
+                return false; // Prevent form submission
+            }
+            return true; // Proceed with form submission
+        }
+    </script>
+   <div class="container my-3">
+   
+   <h1 class="text-dark">Login Form</h1>
+           <form action=" " method="post">
+        <div class="form-group ">
+     <input type="text"  name="name" id="name" placeholder="enter name">
+                 </div>
+         
+
+           <div class="form-group">
+                     
+          <input type="password" name="password" id="password" placeholder="password">
+             
+                       </div>
+   
+<button class="btn  btn-primary" name="login">LOGIN</button>
+<button class="btn btn-dark text-white"><a href="signup.php" style="text-decoration:none;">SIGNUP</a></button>
+       </form>
+   </div>  -->
 </body>
-
 </html>
