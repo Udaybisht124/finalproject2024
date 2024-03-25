@@ -1,8 +1,9 @@
 <?php
-$server="localhost";
-$username="root";
-$password="";
-$dbname="userdata";
+
+$server="sql201.infinityfree.com";
+$username="if0_36235497";
+$password="NAS6hzk2qSy";
+$dbname="if0_36235497_userdata";
 
 // making connection to the database
 $con = mysqli_connect($server,$username,$password,$dbname) or die("error coming to create a connection");
