@@ -8,7 +8,6 @@ session_start();
 ?>
 
 <?php
-
 $server="sql201.infinityfree.com";
 $username="if0_36235497";
 $password="NAS6hzk2qSy";
@@ -22,6 +21,7 @@ if (!$con)
 }
 
 $userprofile=$_SESSION['name'];
+
 if($userprofile == true){
 
 }
@@ -53,10 +53,47 @@ else{
   
   <main id="main">
 
+
+
+
+    
+    <div class="w-100">
+    <!--
+      -------------------------------
+      | navbar login with nav links |
+      -------------------------------
+    -->
+    <div class="navbar navbar-expand-md bg-warning bg-body-tertiary">
+      <div class="container">
+        <!-- ( brandname ) -->
+        <a class="navbar-brand" href="#"><b>QPaper</b></a>
+        <!-- ( toggle button ) -->
+        <div class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </div>
+        <!-- (navbar) -->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav w-auto mx-auto">
+          
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          
+            <a class="nav-link" href="#search">Search Paper</a>
+          
+            <a class="nav-link" href="#">About Us</a>
+
+            <a class="nav-link" href="feedback.php">Feedback</a>
+
+          </div>
+
+          <a class="btn btn-dark p-2" href="logout.php">logout</a>
+        </div>
+      
+      </div>
+    </div>
     <!--
       header section ==============================================================
     -->
-    <header class="bg-dark border-bottom" id="header">
+    <header class=" border-bottom" id="header">
 
       <div class="container py-5">
       <div class="row">
@@ -64,101 +101,109 @@ else{
       </div>
       
       <div class="row">
-
-          <!-- first child -->
-          <div class="col-6">
-        
-          <img src="intangible-assets_10513176.png" class="mx-3" width="100" height="100"alt="">
-<h1 class="font-weight-lighter text-secondary my-5"> 
-<h1 style="font-family:sans-serif;color:#6b936b;font-size:80px;">PyQuestionPapers</h1>
-
-          </div>
-          <!-- second child -->
-          <div class="col-6 d-flex mt-2 align-items-center justify-content-end  box-shadow: 3px 2px 10px var(--dark);
-      ">
-<!--       
-      <a href="#search" class="btn btn-outline-success mx-3 p-2"> SEARCH PAPER </a> -->
-            <a href="feedback.php" class="btn btn-outline-success mx-3 p-2"> FEEDBACK </a>
-            <a href="#search" class="btn btn-outline-success mx-3 p-2"> Search Papers </a>
-            
-            <a href="https://github.com/" class="btn btn-outline-success mx-3 "> About us </a>
-            <a href="logout.php" class="btn btn-outline-success mx-3 p-2"> LogOut </a>
-     
-          </div>
+        <div class="col-6 d-grid align-items-center">
           
+          <div>
+
+            <div class="h1 pb-5"> PREVIOUS YEAR QUESTION PAPERS</div>
+            
+            <div class="lead">Here we can provide a previous year question papers for different universities for benifits of a student.</div>
+          
+            <a href="#search" class="btn btn-outline-dark mt-5 px-3"> Search Paper </a>
+          
+          </div>
+
         </div>
+        <div class="col-6 text-center">
+          <img src="3.png" class="my-5" alt="" width="500px" height="500px" >
+        </div>
+
       </div>
-      <marquee direction="right"><P class="text-success " style="font-size:30px; font-weight:bold;text-decoration:underline;text-decoration-color:white;">HELLO WE ARE MAKING THIS WEBSITE ONLY FOR STUDENT BENEFITS OF UNIVERSITY LEVEL</P>
-</marquee>
+      <marquee direction="right"><P class="text-success " ><b>HELLO WE ARE MAKING THIS WEBSITE ONLY FOR STUDENT BENEFITS OF UNIVERSITY LEVEL</b></P></marquee>
     </header>
 <div>   
 
 </div>
 
-<div class="d-flex bg-dark">
-<div class="card bg-dark" style="width: 18rem;">
-      <img src="puimg.jpeg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title text-white">PANJAB UNIVERSITY</h5>
-        <p class="card-text "style="color:#1abc9c;">This is the best univeristy in Chandigarh</p>
+<!--
+    university section ========================================================================================================================
+-->
+<section id="university">
 
-        <a href="https://pu.ac.in/" class="btn btn-primary">Read More</a>
+
+  
+  <div class="container py-5  ">
+
+<h1 style="font-size:40px;"><span class="h1" style="text-decoration:underline;">Avalabile</span> <span class="text-success" style="text-decoration:underline;">Universites</span> </H1>
+<br><br>
+    <div class="d-flex  gap-2">
+
+      <div class="card" style="width:50rem;">
+        <img src="puimg.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title ">PANJAB UNIVERSITY</h5>
+          <p class="card-text "style="color:#1abc9c;">This is the best univeristy in Chandigarh</p>
+          
+          <a href="https://pu.ac.in/" class="btn btn-secondary text-white">Read More</a>
+        </div>
       </div>
+      
+      <div class="card" style="width:50rem;">
+        <img src="chdchuni.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">CHANDIGARH UNIVERSITY</h5>
+          <p class="card-text "style="color:#1abc9c;">This is the best univeristy in Chandigarh</p>
+          
+          <a href="https://www.cuchd.in/" class="btn btn-secondary text-white">Read More</a>
+        </div>
+      </div>
+      
+      <div class="card" style="width:50rem;">
+        <img src="delhi.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title ">DELHI UNIVERSITY</h5>
+          <p class="card-text "style="color:#1abc9c;">This is the best univeristy in delhi.</p>
+          
+          <a href="https://www.cuchd.in/" class="btn btn-secondary text-white">Read More</a>
+        </div>
+      </div>
+      <div class="card " style="width:50rem;">
+        <img src="nittri.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">NIT TRICHI</h5>
+          <p class="card-text "style="color:#1abc9c;">This is the best univeristy in Chandigarh</p>
+          
+          <a href="https://www.nitt.edu/" class="btn btn-secondary text-white">Read More</a>
+        </div>
+        
+      </div><div class="card" style="width:50rem;">
+        <img src="nitkuru.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title ">NIT KURKSHETRA</h5>
+          <p class="card-text" style="color:#2bc9a4;">This is the best univeristy in Chandigarh</p>
+          
+          <a href="https://nitkkr.ac.in/" class="btn btn-secondary text-white">Read More</a>
+        </div>
+      </div>
+      
+      
+      
     </div>
-
-    <div class="card bg-dark" style="width: 18rem;">
-      <img src="chdchuni.jpeg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title text-white">CHANDIGARH UNIVERSITY</h5>
-        <p class="card-text "style="color:#1abc9c;">This is the best univeristy in Chandigarh</p>
-
-        <a href="https://www.cuchd.in/" class="btn btn-primary">Read More</a>
-      </div>
-    </div>
-
-    <div class="card bg-dark" style="width: 18rem;">
-      <img src="delhi.jpeg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title text-white">DELHI UNIVERSITY</h5>
-        <p class="card-text "style="color:#1abc9c;">This is the best univeristy in  New Delhi</p>
-
-        <a href="https://www.du.ac.in/" class="btn btn-primary">Read More</a>
-      </div>
-    </div>
-  <div class="card bg-dark" style="width: 18rem;">
-      <img src="nittri.jpeg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title text-white">NIT TRICHI</h5>
-        <p class="card-text "style="color:#1abc9c;">This is the best univeristy in Chandigarh</p>
-
-        <a href="https://www.nitt.edu/" class="btn btn-primary">Read More</a>
-      </div>
-    </div><div class="card bg-dark" style="width: 18rem;">
-      <img src="nitkuru.jpeg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title text-white">NIT KURKSHETRA</h5>
-        <p class="card-text" style="color:#2bc9a4;">This is the best univeristy in Chandigarh</p>
-
-        <a href="https://nitkkr.ac.in/" class="btn btn-primary">Read More</a>
-      </div>
-    </div>
-
-
-
   </div>
+</section>
     <!--
       content section =======================================================
     -->
-    <section id="content" class="bg-dark">
+    <section id="content" class="">
       <!--
         search bar ------------------------
       -->
-      <div class="p-5" id="search">
+      <div class="p-5 bg-light" id="search">
         <div class="container ">
 
-          <div class="h2 py-3 bg-dark"> Search Question Paper that you require </div>
+          <div class="h2 py-3 "> Search Question Paper that you require </div>
           
-          <input type="search" name="" id="searchbar" class="form-control" placeholder="Search PDF question paper ...">
+          <input type="search" name="" id="searchbar" class="form-control bg-white" placeholder="Search PDF question paper ...">
         
         </div>
       </div>
@@ -178,7 +223,7 @@ else{
       footer section ===============================================================
     -->
     <footer id="footer">
-      <div class="container border-top py-3">
+      <div class="container border-top py-5">
 
         <div class="h5"> Copyright &copy; <a href="https://github.com/Udaybisht124">Uday</a> and <a href="" class="">Rohit</a>  </div>
         
@@ -196,7 +241,7 @@ else{
 <!-- Setup and start animation! -->
 <script>
   var typed = new Typed('#element', 
-    strings: ['<b>FREE PAPER DOWNLOAD</b>','PANJAB UNIVERSITY','CHANDIGARH UNIVERSITY'],
+    strings: ['<b>FREE PAPER DOWNLOAD</b>','FOR','PANJAB UNIVERSITY','CHANDIGARH UNIVERSITY'],
     typeSpeed: 100,
 );
 </script>
