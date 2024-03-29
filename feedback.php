@@ -109,7 +109,7 @@ mysqli_close($con);
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav w-auto mx-auto">
           
-            <a class="nav-link active text-success" aria-current="page" href="home.php">Home</a>
+            <a class="nav-link active " aria-current="page" href="home.php">Home</a>
           
             <a class="nav-link" href="home.php">Search Paper</a>
           
