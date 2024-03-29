@@ -1,5 +1,4 @@
 <?php
-
 $server="localhost";
 $username="root";
 $password="";
@@ -83,7 +82,7 @@ mysqli_close($con);
     <div class="navbar navbar-expand-md bg-warning bg-body-tertiary">
       <div class="container">
         <!-- ( brandname ) -->
-        <a class="navbar-brand" href="#"><b>QPaper</b></a>
+        <a class="navbar-brand" href="#"><img src="logo.png" height="40" width="40"  alt=""><b>QPaper</b></a>
         <!-- ( toggle button ) -->
         <div class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>

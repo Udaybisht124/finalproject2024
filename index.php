@@ -4,10 +4,10 @@ session_start();
 
 
 // include("connection.php"); // connection
-$server="sql201.infinityfree.com";
-$username="if0_36235497";
-$password="NAS6hzk2qSy";
-$dbname="if0_36235497_userdata";
+$server="localhost";
+$username="root";
+$password="";
+$dbname="userdata";
 
 $con = mysqli_connect($server,$username,$password,$dbname);
 
@@ -85,7 +85,7 @@ if(isset($_POST['login'])){
     <div class="navbar navbar-expand-md bg-warning bg-body-tertiary">
       <div class="container">
         <!-- ( brandname ) -->
-        <a class="navbar-brand" href="#"><b>QPaper</b></a>
+        <a class="navbar-brand" href="#"><img src="img\logo.png" height="40" width="40"  alt=""><b>QPaper</b></a>
         <!-- ( toggle button ) -->
         <div class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -114,14 +114,14 @@ if(isset($_POST['login'])){
     <div class="row">
       <div class="col-6">
         
-        <img src="3.png" class="my-5" alt="">
+        <img src="img\3.png" class="my-5" alt="">
 
       </div>
       <div class="col"></div>
 
       <div class="col-4">
 
-      <div class="h1 py-3"> <img src="logo.png" alt="" width="50px" height="50px"> QPaper </div>
+      
 
       <div class="w-100 py-3 "></div>
 

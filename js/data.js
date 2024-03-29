@@ -2029,7 +2029,16 @@ data = [
       year: '2021',
       stream: 'ba.bsc(general)',
       semester:'6th',
-      month:'zjuly',
+      month:'may',
+      subject: 'sociology(sociol demography)',
+      url: 'https://drive.google.com/file/d/19cU1XVD_FI9QwcCUxXmMT08Cauhjs5Wi/view?usp=sharing'
+   }
+   , {
+      university: 'panjab university',
+      year: '2021',
+      stream: 'ba.bsc(general)',
+      semester:'6th',
+      month:'may',
       subject: 'sociology(sociol demography)',
       url: 'https://drive.google.com/file/d/19cU1XVD_FI9QwcCUxXmMT08Cauhjs5Wi/view?usp=sharing'
    }

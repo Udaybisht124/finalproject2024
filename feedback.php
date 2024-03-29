@@ -2,11 +2,10 @@
 
 <?php
 session_start();
-$server="sql201.infinityfree.com";
-$username="if0_36235497";
-$password="NAS6hzk2qSy";
-$dbname="if0_36235497_userdata";
-
+$server="localhost";
+$username="root";
+$password="";
+$dbname="feedback1";
 $con = mysqli_connect($server,$username,$password,$dbname);
 
 if (!$con)
@@ -26,11 +25,10 @@ else{
 
 ?>
 <?php
-$server="sql201.infinityfree.com";
-$username="if0_36235497";
-$password="NAS6hzk2qSy";
-$dbname="if0_36235497_userdata";
-
+$server="localhost";
+$username="root";
+$password="";
+$dbname="feedback1";
 // making connection to the database
 $con = mysqli_connect($server,$username,$password,$dbname) or die("error coming to create a connection");
 
@@ -102,7 +100,7 @@ mysqli_close($con);
     <div class="navbar navbar-expand-md bg-warning bg-body-tertiary">
       <div class="container">
         <!-- ( brandname ) -->
-        <a class="navbar-brand" href="#"><b>QPaper</b></a>
+        <a class="navbar-brand" href="home.php"><img src="img\logo.png" height="40" width="40"  alt=""><b>QPaper</b></a>
         <!-- ( toggle button ) -->
         <div class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -111,17 +109,17 @@ mysqli_close($con);
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav w-auto mx-auto">
           
-            <a class="nav-link active" aria-current="page" href="home.php">Home</a>
+            <a class="nav-link active text-success" aria-current="page" href="home.php">Home</a>
           
             <a class="nav-link" href="home.php">Search Paper</a>
           
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="about.php">About Us</a>
 
             <a class="nav-link" href="feedback.php">Feedback</a>
 
           </div>
 
-          <a class="btn btn-dark p-2" href="logout.php">logout</a>
+          <a class="btn btn-dark p-2" href="logout.php"><b>logout</b></a>
         </div>
       
       </div>
@@ -131,7 +129,7 @@ mysqli_close($con);
     <div class="row">
       <div class="col-6">
         
-        <img src="3.png" class="my-5" alt="">
+        <img src="img\3.png" class="my-5" alt="">
 
       </div>
       <div class="col"></div>

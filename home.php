@@ -8,10 +8,11 @@ session_start();
 ?>
 
 <?php
-$server="sql201.infinityfree.com";
-$username="if0_36235497";
-$password="NAS6hzk2qSy";
-$dbname="if0_36235497_userdata";
+$server="localhost";
+$username="root";
+$password="";
+$dbname="userdata";
+
 
 $con = mysqli_connect($server,$username,$password,$dbname);
 
@@ -66,20 +67,20 @@ else{
     <div class="navbar navbar-expand-md bg-warning bg-body-tertiary">
       <div class="container">
         <!-- ( brandname ) -->
-        <a class="navbar-brand" href="#"><b>QPaper</b></a>
+        <a class="navbar-brand" href="#"><img src="img\logo.png" height="40" width="40"  alt=""><b>QPaper</b></a>
         <!-- ( toggle button ) -->
         <div class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </div>
         <!-- (navbar) -->
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav w-auto mx-auto">
+          <div class="navbar-nav w-auto mx-auto" id="navbar">
           
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active "  aria-current="page" href="#">Home</a>
           
-            <a class="nav-link" href="#search">Search Paper</a>
+            <a class="nav-link " href="#search">Search Paper</a>
           
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="about.php">About Us</a>
 
             <a class="nav-link" href="feedback.php">Feedback</a>
 
@@ -105,7 +106,7 @@ else{
           
           <div>
 
-            <div class="h1 pb-5"> PREVIOUS YEAR QUESTION PAPERS</div>
+            <div class="h1 pb-5 text-success"> PREVIOUS YEAR QUESTION PAPERS</div>
             
             <div class="lead">Here we can provide a previous year question papers for different universities for benifits of a student.</div>
           
@@ -115,11 +116,11 @@ else{
 
         </div>
         <div class="col-6 text-center">
-          <img src="3.png" class="my-5" alt="" width="500px" height="500px" >
+          <img src="img\3.png" class="my-5" alt="" width="500px" height="500px" >
         </div>
 
       </div>
-      <marquee direction="right"><P class="text-success " ><b>HELLO WE ARE MAKING THIS WEBSITE ONLY FOR STUDENT BENEFITS OF UNIVERSITY LEVEL</b></P></marquee>
+      <marquee direction="right"><P class="text-success " style="font-size:2rem;"><b>HELLO WE ARE MAKING THIS WEBSITE ONLY FOR STUDENT BENEFITS OF UNIVERSITY LEVEL</b></P></marquee>
     </header>
 <div>   
 
@@ -139,7 +140,7 @@ else{
     <div class="d-flex  gap-2">
 
       <div class="card" style="width:50rem;">
-        <img src="puimg.jpeg" class="card-img-top" alt="...">
+        <img src="img\puimg.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title ">PANJAB UNIVERSITY</h5>
           <p class="card-text "style="color:#1abc9c;">This is the best univeristy in Chandigarh</p>
@@ -149,7 +150,7 @@ else{
       </div>
       
       <div class="card" style="width:50rem;">
-        <img src="chdchuni.jpeg" class="card-img-top" alt="...">
+        <img src="img\chdchuni.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">CHANDIGARH UNIVERSITY</h5>
           <p class="card-text "style="color:#1abc9c;">This is the best univeristy in Chandigarh</p>
@@ -159,33 +160,35 @@ else{
       </div>
       
       <div class="card" style="width:50rem;">
-        <img src="delhi.jpeg" class="card-img-top" alt="...">
+        <img src="img\delhi-university.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title ">DELHI UNIVERSITY</h5>
           <p class="card-text "style="color:#1abc9c;">This is the best univeristy in delhi.</p>
           
-          <a href="https://www.cuchd.in/" class="btn btn-secondary text-white">Read More</a>
+          <a href="https://www.du.ac.in/" class="btn btn-secondary text-white">Read More</a>
         </div>
       </div>
+     
       <div class="card " style="width:50rem;">
-        <img src="nittri.jpeg" class="card-img-top" alt="...">
+        <img src="img\pupat.png" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">NIT TRICHI</h5>
-          <p class="card-text "style="color:#1abc9c;">This is the best univeristy in Chandigarh</p>
+          <h5 class="card-title">Panjab University Patiala</h5>
+          <p class="card-text "style="color:#1abc9c;">This is the best univeristy in located at Panjab</p>
           
           <a href="https://www.nitt.edu/" class="btn btn-secondary text-white">Read More</a>
         </div>
         
-      </div><div class="card" style="width:50rem;">
-        <img src="nitkuru.jpeg" class="card-img-top" alt="...">
+      </div>
+      
+      <div class="card" style="width:50rem;">
+        <img src="img\nitkuru.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title ">NIT KURKSHETRA</h5>
+          <h5 class="card-title ">NIT KURUSHETRA</h5>
           <p class="card-text" style="color:#2bc9a4;">This is the best univeristy in Chandigarh</p>
           
           <a href="https://nitkkr.ac.in/" class="btn btn-secondary text-white">Read More</a>
         </div>
       </div>
-      
       
       
     </div>
@@ -205,11 +208,8 @@ else{
           
           <input type="search" name="" id="searchbar" class="form-control bg-white" placeholder="Search PDF question paper ...">
         
-        </div>
-      </div>
-      <!-- 
-          { MAIN DATA CONTAINER  } --------------------------
-       -->
+        </div>  </div>
+      
       <div class="container">
 
         <div id="main_data_container">
@@ -239,12 +239,7 @@ else{
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
 <!-- Setup and start animation! -->
-<script>
-  var typed = new Typed('#element', 
-    strings: ['<b>FREE PAPER DOWNLOAD</b>','FOR','PANJAB UNIVERSITY','CHANDIGARH UNIVERSITY'],
-    typeSpeed: 100,
-);
-</script>
+
 
 </body>
 
